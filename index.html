@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head><title>Time Table</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+    <body onload=Mas()>
+            <h1 align=center>SAFI TIMES</h1>
+            <hr>
+            <u><h2 align=center>COURSE</h2></u>
+<!--CLOCK-->
+<div><p id="MyClockDisplay" class="clock"></p></div>
+<script type="text/javascript">
+            var t1 = "Lulu Farsana";
+            var t2 = "Faseela";
+            var t3 = "Razak";
+            var t4 = "Samad";
+            var t5 = "Arshad";
+            var t6 = "Mansoor";
+
+            var date = new Date();
+      var h = date.getHours();
+      var m = date.getMinutes();
+      var s = date.getSeconds();
+      var session = "Am";
+      var day = date.getDay();
+      var dayarray = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday",)
+
+
+
+    function showTime()
+    {
+      var date = new Date();
+      var h = date.getHours();
+      var m = date.getMinutes();
+      var s = date.getSeconds();
+      var session = "Am";
+      var day = date.getDay();
+      var dayarray = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday",)
+
+      if (h==0){
+              h=12;
+              }
+
+          if (h>12){
+            h=h-12;
+            session="pm";
+          } 
+
+      h=(h<10)?"0"+h:h;
+      m=(m<10)?"0"+m:m;
+      s=(s<10)?"0"+s:s;
+
+      var time = h+":"+m+":"+s+"  "+session+" [ "+dayarray[day]+" ]";
+            document.getElementById("MyClockDisplay").innerText=time;
+            document.getElementById("MyClockDisplay").innerContent=time;
+
+        setTimeout(showTime,1000);
+
+       
+
+    }
+    showTime()
+  
+    function Mas()
+      {
+        
+             document.getElementById("Monday").style.display = 'none';
+             document.getElementById("Tuesday").style.display = 'none';
+             document.getElementById("Wednesday").style.display = 'none';
+             document.getElementById("Thursday").style.display = 'none';
+             document.getElementById("Friday").style.display = 'none';
+             document.getElementById("Master").style.display = '';
+     }
+
+
+    function Mon()
+      {
+        
+             document.getElementById("Monday").style.display = '';
+             document.getElementById("Tuesday").style.display = 'none';
+             document.getElementById("Wednesday").style.display = 'none';
+             document.getElementById("Thursday").style.display = 'none';
+             document.getElementById("Friday").style.display = 'none';
+             document.getElementById("Master").style.display = 'none';
+     }
+     
+     function Tue()
+      {
+        
+             document.getElementById("Monday").style.display = 'none';
+             document.getElementById("Tuesday").style.display = '';
+             document.getElementById("Wednesday").style.display = 'none';
+             document.getElementById("Thursday").style.display = 'none';
+             document.getElementById("Friday").style.display = 'none';
+             document.getElementById("Master").style.display = 'none';
+     }
+     function Wed()
+      {
+        
+             document.getElementById("Monday").style.display = 'none';
+             document.getElementById("Tuesday").style.display = 'none';
+             document.getElementById("Wednesday").style.display = '';
+             document.getElementById("Thursday").style.display = 'none';
+             document.getElementById("Friday").style.display = 'none';
+             document.getElementById("Master").style.display = 'none';
+     }
+     function Thu()
+      {
+        
+             document.getElementById("Monday").style.display = 'none';
+             document.getElementById("Tuesday").style.display = 'none';
+             document.getElementById("Wednesday").style.display = 'none';
+             document.getElementById("Thursday").style.display = '';
+             document.getElementById("Friday").style.display = 'none';
+             document.getElementById("Master").style.display = 'none';
+     }
+     function Fri()
+      {
+        
+             document.getElementById("Monday").style.display = 'none';
+             document.getElementById("Tuesday").style.display = 'none';
+             document.getElementById("Wednesday").style.display = 'none';
+             document.getElementById("Thursday").style.display = 'none';
+             document.getElementById("Friday").style.display = '';
+             document.getElementById("Master").style.display = 'none';
+     }
+
+    </script>
+    
+<!--TIME TABLE-->
+                <p id="now" class="now">NOW:Teacher</p>
+                <p id="next" class="next">NEXT:Teacher</p>
+            <div class="row justify-content-center">
+            <table id="Master" class="content-table table-striped" >
+                        <thead>
+                        <tr>
+                            <th>DAY</th>
+                            <th>9:30</th>
+                            <th>10:30</th>
+                            <th>11:40</th>
+                            <th>12:40</th>
+                            <th>1:30</th>
+                            <th>2:30</th>
+                            
+                        </tr>
+                        </thead>
+                            <tbody>
+                                <tr>
+                                    <th id="monday" onclick=Mon() style="cursor: pointer">Monday</th>
+                                    <td>Sub</td> 
+                                    <td>Sub</td>                      
+                                    <td>Sub</td>
+                                    <td>Sub</td>
+                                    <td>Sub</td>
+                                    <td>Sub</td>
+                                </tr>       
+
+                                <tr>
+                                    <th id="tuesday" onclick="Tue()" style="cursor: pointer">Tuesday</th>
+                                    <td>Sub</td> 
+                                    <td>Sub</td>                      
+                                    <td>Sub</td>
+                                    <td>Sub</td>                                
+                                    <td>Sub</td>
+                                    <td>Sub</td>
+                                </tr>       
+
+                                <tr>
+                                    <th id="wednesday" onclick="Wed()" style="cursor: pointer">Wednesday</th>
+                                    <td>Sub</td> 
+                                    <td>Sub</td>                      
+                                    <td>Sub</td>
+                                    <td>Sub</td>
+                                    <td>Sub</td>
+                                    <td>Sub</td>
+                                </tr>       
+
+                                <tr>
+                                    <th id="thursday" onclick="Thu()" style="cursor: pointer">Thursday</th>
+                                    <td>Sub</td> 
+                                    <td>Sub</td>                      
+                                    <td>Sub</td>
+                                    <td>Sub</td>
+                                    <td>Sub</td>
+                                    <td>Sub</td>
+                                </tr>       
+                            
+                                <tr>
+                                    <th id="friday" onclick="Fri()" style="cursor: pointer">Friday</th>
+                                    <td>Sub</td> 
+                                    <td>Sub</td>                      
+                                    <td>Sub</td>
+                                    <td>Sub</td>
+                                    <td>Sub</td>
+                                    <td>Sub</td>
+                                </tr>                                                   
+                            </tbody>
+            </table>
+       
+        </div> 
+
+        <div class="row justify-content-center">
+
+            <table id="Monday"  class="content-table table-striped" >
+                <caption style="caption-side:top">Monday</caption>
+                <thead>
+                <tr>
+                    <th>Today</th>
+                    <th>9:30</th>
+                    <th>10:30</th>
+                    <th>11:40</th>
+                    <th>12:40</th>
+                    <th>1:30</th>
+                    <th>2:30</th>
+                    
+                </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <th>Subjects</th>
+                            <td>Sub</td> 
+                            <td>Sub</td>                      
+                            <td>Sub</td>
+                            <td>Sub</td>
+                            <td>Sub</td>
+                            <td>Sub</td>
+                        </tr>       
+
+                        <tr>
+                            <th>Teacher</th>
+                            <td>t1</td> 
+                            <td>t2</td>                      
+                            <td>t3</td>
+                            <td>t4</td>                                
+                            <td>t5</td>
+                            <td>t6</td>
+                        </tr>       
+
+                                                                 
+                    </tbody>
+    </table> 
+
+        </div>
+        
+        <div class="row justify-content-center">
+
+            <table id="Tuesday"  class="content-table table-striped" >
+                <caption style="caption-side:top" >Tuesday</caption>
+                <thead>
+                <tr>
+                    <th>Today</th>
+                    <th>9:30</th>
+                    <th>10:30</th>
+                    <th>11:40</th>
+                    <th>12:40</th>
+                    <th>1:30</th>
+                    <th>2:30</th>
+                    
+                </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <th>Subjects</th>
+                            <td>Sub</td> 
+                            <td>Sub</td>                      
+                            <td>Sub</td>
+                            <td>Sub</td>
+                            <td>Sub</td>
+                            <td>Sub</td>
+                        </tr>       
+
+                        <tr>
+                            <th>Teacher</th>
+                            <td>t1</td> 
+                            <td>t2</td>                      
+                            <td>t3</td>
+                            <td>t4</td>                                
+                            <td>t5</td>
+                            <td>t6</td>
+                        </tr>       
+
+                                                                 
+                    </tbody>
+    </table> 
+
+        </div>
+        
+        <div class="row justify-content-center">
+
+            <table id="Wednesday"  class="content-table table-striped" >
+                <caption style="caption-side:top">Wednesday</caption>
+                <thead>
+                <tr>
+                    <th>Today</th>
+                    <th>9:30</th>
+                    <th>10:30</th>
+                    <th>11:40</th>
+                    <th>12:40</th>
+                    <th>1:30</th>
+                    <th>2:30</th>
+                    
+                </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <th>Subjects</th>
+                            <td>Sub</td> 
+                            <td>Sub</td>                      
+                            <td>Sub</td>
+                            <td>Sub</td>
+                            <td>Sub</td>
+                            <td>Sub</td>
+                        </tr>       
+
+                        <tr>
+                            <th>Teacher</th>
+                            <td>t1</td> 
+                            <td>t2</td>                      
+                            <td>t3</td>
+                            <td>t4</td>                                
+                            <td>t5</td>
+                            <td>t6</td>
+                        </tr>       
+
+                                                                 
+                    </tbody>
+    </table> 
+
+        </div>
+        
+        <div class="row justify-content-center">
+
+            <table id="Thursday"  class="content-table table-striped" >
+                <caption style="caption-side:top">Thursday</caption>
+                <thead>
+                <tr>
+                    <th>Today</th>
+                    <th>9:30</th>
+                    <th>10:30</th>
+                    <th>11:40</th>
+                    <th>12:40</th>
+                    <th>1:30</th>
+                    <th>2:30</th>
+                    
+                </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <th>Subjects</th>
+                            <td>Sub</td> 
+                            <td>Sub</td>                      
+                            <td>Sub</td>
+                            <td>Sub</td>
+                            <td>Sub</td>
+                            <td>Sub</td>
+                        </tr>       
+
+                        <tr>
+                            <th>Teacher</th>
+                            <td>t1</td> 
+                            <td>t2</td>                      
+                            <td>t3</td>
+                            <td>t4</td>                                
+                            <td>t5</td>
+                            <td>t6</td>
+                        </tr>       
+
+                                                                 
+                    </tbody>
+    </table> 
+
+        </div>
+        
+        <div class="row justify-content-center">
+
+            <table id="Friday"  class="content-table table-striped" >
+                <caption style="caption-side:top">Friday</caption>
+                <thead>
+                <tr>
+                    <th>Today</th>
+                    <th>9:30</th>
+                    <th>10:30</th>
+                    <th>11:40</th>
+                    <th>12:40</th>
+                    <th>1:30</th>
+                    <th>2:30</th>
+                    
+                </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <th>Subjects</th>
+                            <td>Sub</td> 
+                            <td>Sub</td>                      
+                            <td>Sub</td>
+                            <td>Sub</td>
+                            <td>Sub</td>
+                            <td>Sub</td>
+                        </tr>       
+
+                        <tr>
+                            <th>Teacher</th>
+                            <td>t1</td> 
+                            <td>t2</td>                      
+                            <td>t3</td>
+                            <td>t4</td>                                
+                            <td>t5</td>
+                            <td>t6</td>
+                        </tr>       
+
+                                                                 
+                    </tbody>
+    </table> 
+
+        </div>
+        
+    </body>
+    </html>

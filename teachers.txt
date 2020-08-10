@@ -1,0 +1,23 @@
+ if (m==30){
+            document.getElementById("now").innerHTML="NOW:"+t1;
+            document.getElementById("next").innerHTML="NEXT:"+t2;
+            }
+            if (m==31){
+            document.getElementById("now").innerHTML="NOW:"+t2;
+            document.getElementById("next").innerHTML="NEXT:"+t3;
+            }
+            if (m==32){
+            document.getElementById("now").innerHTML="NOW:"+t3;
+            document.getElementById("next").innerHTML="NEXT:"+t4;}
+            if (m==45){
+            document.getElementById("now").innerHTML="NOW:"+t4;
+            document.getElementById("next").innerHTML="NEXT:"+t5;
+            }
+            if (m==46){
+            document.getElementById("now").innerHTML="NOW:"+t5;
+            document.getElementById("next").innerHTML="NEXT:"+t6;
+            }
+            if (m==47){
+            document.getElementById("now").innerHTML="NOW:"+t6;
+            document.getElementById("next").innerHTML="NEXT:CLASS END";
+             }
